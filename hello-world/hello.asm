@@ -4,8 +4,8 @@
 ; Programa "Hello World!"
 
 section .data
-    msg db 'Hello World!', 0xA  ; Mensagem que será enviada na saída
-    len equ $ - msg             ; Definindo o tamanho da mensagem
+        msg db 'Hello World!', 0xA  ; Mensagem que será enviada na saída
+        len equ $ - msg             ; Definindo o tamanho da mensagem
 
 section .text
     global _start
