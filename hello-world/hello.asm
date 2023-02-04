@@ -1,18 +1,20 @@
+section .data
+    msg db 'Hello World', 0xA
+    tam equ $ - msg    
+
 section .text
+
+
 global _start
 
+
 _start:
-mov edx,len
-mov ecx,msg
-mov ebx,1
-mov eax,4
+    mov eax, 0x4
+    mov ebx, 0x1
+    mov ecx, msg
+    mov edx, tam
+    int 0x80
 
-int 0x80
-
-mov eax,1
-
-int 0x80
-
-section .data;
-msg db 'Hello, World!',0xa
-len equ $ - msg
+    mov eax, 0x1
+    mov ebx, 0x0
+    int 0x80
