@@ -3,14 +3,15 @@
 
 ; Programa "Entrada de informações em Assembly"
 
+segment .data
+        QL db 0xA                           ; Definindo quebra de linha
+
 section .data
         msg db 'Digite seu nome: '
         len equ $ - msg
 
         msg2 db 'Digite seu curso: '
         len2 equ $ - msg2
-
-        QL db 0xA                           ; Definindo quebra de linha
 
 section .bss
         name resb 1                         ; Declarando "variáveis" que irão receber as respostas do usuário
