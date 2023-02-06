@@ -20,8 +20,8 @@ section .text
         ; jmp ->  jump to ..
         ; jge ->  jump to .. if greater or equal
         ; jg  ->  jump to .. if greater
-        ; jle ->  jump to .. if lower or equal
-        ; jl  ->  jump to .. if lower
+        ; jle ->  jump to .. if less or equal
+        ; jl  ->  jump to .. if less
         ; jne ->  jump to .. if not equal
 
     _start:
