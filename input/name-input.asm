@@ -14,8 +14,8 @@ section .data
         len2 equ $ - msg2
 
 section .bss
-        name resb 1                         ; Declarando "variáveis" que irão receber as respostas do usuário
-        course resb 1                       ; resb -> reserva 1 byte
+        name resb 0x1                         ; Declarando "variáveis" que irão receber as respostas do usuário
+        course resb 0x1                       ; resb -> reserva 1 byte
 
 section .text
     global _start
