@@ -1,4 +1,4 @@
-NOME = testLibrary
+NOME = converter
 
 all: $(NOME).o
 	ld -s -o $(NOME) $(NOME).o
