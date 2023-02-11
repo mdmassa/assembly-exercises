@@ -38,8 +38,8 @@ section .text
 
         .next_digit_SI:
             movzx eax, byte[esi]
-            inc esi
-            sub al, '0'
+            inc esi               ; Incrementar ESI
+            sub al, '0'           ; Subtrair '0' do registrador AL
             imul ebx, 0xA
             add ebx, eax          ; Realizando a multiplicação de EBX por 10 e somando a EAX [ebx =* 10+ eax]
         loop .next_digit_SI       ; Corresponde ao while (--ecx) -> TAMANHO DA STRING
@@ -48,10 +48,10 @@ section .text
     ret
 
     int_to_string:
-        lea esi, [buffer]
-        add esi, 0x9
-        mov byte[esi], 0xA
-        mov ebx, 0xA
+        lea esi, [buffer]         ; Espelhar buffer no ESI
+        add esi, 0x9              ; Adicionar o valor 9 no ESI
+        mov byte[esi], 0xA        ; Mover o valor 10 para byte de ESI
+        mov ebx, 0xA              ; Mover o valor 10 para EBX
 
         .next_digit_IS:
             xor edx, edx
